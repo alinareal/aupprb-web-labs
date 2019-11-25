@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>L5</title>
+</head>
+<body>
+	<a href = 'google.com'>Ссылка</a>
+	<form name="contact_form" method="post" action="dumb.htm" onsubmit="return validate_form ( );">
+		<h1>Пожалуйста введите Ваше имя.</h1>
+		<p>Ваше имя: <input type="text" name="contact_name"></p>
+		<input type="submit" name="send" value="Отправить данные"></p>
+	</form>
+
+	<p>This is a paragraph.</p>
+	<p>Here we are going to count total number of paragraphs by getElementByTagName() method.</p>
+	<p>Let's see the simple example</p>
+	<button onclick="countpara()">count paragraph</button>
+
+<script type="text/javascript">
+	// 1
+	/*location="http://yandex.ru";
+	document.location.href="http://yandex.ru";
+	location.replace("http://yandex.ru");
+	window.location.reload("http://yandex.ru");
+	document.location.replace("http://yandex.ru");
+	setTimeout( 'location="http://yandex.ru";', 5000 );*/
+
+	// 3
+	document.write("<br />" + document.links[0].hostname);
+	document.write("<br />" + document.links[0].pathname);
+	document.write("<br />" + document.links[0].href);
+
+	// 4
+	document.write("<br />" + window.navigator.appName);
+	document.write("<br />" + "Your browser version is reported as " + navigator.appVersion);
+
+	// 5
+	function validate_form() {
+		valid = true;
+		if ( document.contact_form.contact_name.value == "" ) {
+			alert ( "Пожалуйста заполните поле 'Ваше имя'." );
+			valid = false;
+		}
+ 		return valid;
+	};
+
+	// 6
+	function countpara() {  
+		var totalpara=document.getElementsByTagName("p");
+		document.write("<br />" + "Total p tags are: " + totalpara.length);
+	};
+	countpara();
+
+	// 7
+	var a = new Object();
+	document.write("<br />" + a.toString());
+
+	obj.watch(prop, handler);
+	obj.unwatch(prop);
+	
+</script>
+</body>
+</html>

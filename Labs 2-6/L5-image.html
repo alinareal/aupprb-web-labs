@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>image</title>
+</head>
+<body>
+	<IMG SRC="belodedni.jpg" WIDTH="151" HEIGHT”"10" BORDER="0" АLТ="Компьютер">
+<script type="text/javascript">
+    // 2
+	function sizer() { 
+		if (document.images[0].width<451) { 
+			document.images[0].width+=2; 
+			document.images[0].height+=3; 
+			setTimeout("sizer()", 20); } 
+		}
+	sizer();
+</script>
+</body>
+</html>

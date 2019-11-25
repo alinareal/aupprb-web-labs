@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Структуры данных. Введение в методы и свойства</title>
+</head>
+<body>
+	<script type="text/javascript">
+	var cat = {
+    'color': 'gray',
+    'age': 2,
+    say: function() {
+        alert('Miu miu');
+    }
+	};
+
+	var book = {
+		'name': '"The Godfather"',
+		'author': 'Mario Puzo',
+		'year': 1969
+	};
+
+	book.genre = 'Crime Fiction';
+	book.characters = ['Vito Corleone', 'Michael Corleone', 'Sonny Corleone'];
+
+	delete book.genre; // Удаление свойства
+
+	//document.write('The book ' + book.name + ' was written by ' + book.author + '.' + '<br />');
+
+	for (var i in book) {
+		document.write(i + ': ' + book[i] + '<br />');
+	}; // Перебор свойств
+
+	var counter = 0;
+	for (i in book) {
+		counter++
+	}; // Количество свойств в объекте
+	document.write('<br />' + 'Количество свойств в объекте book: ' + counter);
+
+	var region = {
+		'5': 'Minsk',
+		'3': 'Gomel',
+		'6': 'Mogilev',
+	};
+
+	for (var y in region) {
+		document.write('<br />' + y);
+	}; // порядок перебора свойств
+
+	var region = {
+		'+5': 'Minsk',
+		'+3': 'Gomel',
+		'+6': 'Mogilev',
+	};
+
+	for (y in region) {
+ 		var value = region[y];
+  		y = +y;
+		document.write( '<br />' + y);
+	}; // порядок перебора свойств
+
+	// Объекты: передача по ссылке
+	var company = 'Apple'; 
+	var fruit = company; // Копирование по значению
+
+	var money = { 
+		'sign': '$', 
+		'rate': 2.18 
+	}; 
+    var dollar = money; // Копирование по ссылке
+
+    var currency = {};
+    for (i in money) {
+    	currency[i] = money[i];
+    }; // Клонирование объектов
+
+    book.writtenBy = function() {
+    	document.write('<br />' + 'The book ' + this.name + ' was written by ' + this.author + '.');
+    };
+
+    book.writtenBy();
+
+	document.write('<br />');
+
+    var pet;
+    function test_var(x) {
+    document.write(x in window);
+	};
+	test_var(pet);
+	</script>
+</body>
+</html>

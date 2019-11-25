@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello</title>
+</head>
+<body>
+<script type="text/javascript">
+	/* 2) Для массива напишите 3 функции вычисления среднего значения 10 чисел 
+	для двух групп индексов: четные и нечетные (for, while, do, switch/case)*/
+
+	// for
+	var sumEven1 = 0;
+	var sumOdd1 = 0;
+	function countAvg1(arr1) {
+		for (var i=0; i < 10; i+=2) {
+			sumEven1 += arr1[i];
+		};
+
+		for (var k=1; k < 10; k+=2) {
+			sumOdd1 += arr1[k];
+		};
+
+		var avgEven1 = sumEven1 / 5;
+		var avgOdd1 = sumOdd1 / 5;
+		
+		return avgEven1 + ", " + avgOdd1;
+	};
+	document.write(countAvg1([1, 5, 6, 8, 9, 4, 3, 2, 6, 4]) + "<br />"); // 4.8
+
+	// while
+	var sumEven2 = 0;
+	var sumOdd2 = 0;
+	var n = 0;
+	var p = 1;
+	function countAvg2(arr2) {
+		while (n < 10) {
+			sumEven2 += arr2[n];
+			n += 2;
+		};
+
+		while (p < 10) {
+			sumOdd2 += arr2[p];
+			p += 2;
+		};
+
+		var avgEven2 = sumEven2 / 5;
+		var avgOdd2 = sumOdd2 / 5;
+		
+		return avgEven2 + ", " + avgOdd2;
+	};
+	document.write(countAvg2([1, 5, 6, 8, 9, 4, 3, 2, 6, 4]) + "<br />"); // 4.8
+
+	// do
+	var sumEven3 = 0;
+	var sumOdd3 = 0;
+	var s = 0;
+	var x = 1;
+	function countAvg3(arr3) {
+		do {
+			sumEven3 += arr3[s];
+			s += 2;
+		} while (s < 10);
+
+		do {
+			sumOdd3 += arr3[x];
+			x += 2;
+		} while (x < 10);
+
+		var avgEven3 = sumEven3 / 5;
+		var avgOdd3 = sumOdd3 / 5;
+		
+		return avgEven3 + ", " + avgOdd3;
+	};
+	document.write(countAvg3([1, 5, 6, 8, 9, 4, 3, 2, 6, 4]) + "<br />"); // 4.8
+
+	// switch
+
+	/*var sumEven4 = 0;
+	var sumOdd4 = 0;
+	var h = 0;
+	function countAvg4(arr4) {
+		switch (h < 10) {
+			case (h%2==0):
+				sumEven4 += arr4[h];
+				break
+			case (h%2!=0):
+				sumOdd4 += arr4[h];
+		};
+	};
+	document.write(countAvg4([1, 5, 6, 8, 9, 4, 3, 2, 6, 4]) + "<br />");*/
+</script>
+</body>
+</html>

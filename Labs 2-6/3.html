@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+document.write("Задача №3");
+
+//Задача 3
+function count(arr) {
+	if (arr == undefined) {
+		document.write("<br />" + "Ошибка! Аргумент не задан!");
+	} else {
+		document.write("<br />" + arr.length);
+	};
+};
+
+count(['Alina', 'Dog', 'Student', true, 18.8]); //5
+count([['a', 'b'], [3, 5, 7]]); //2
+count([]); //0
+count(); //Ошибка! Аргумент не задан!
+</script>
+</body>
+</html>

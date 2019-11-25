@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>L6</title>
+</head>
+<body>
+	<FORM NAME=f METHOD=post ACTION="http://www.intuit.ru/rating_students/" encoding="application/x-www-form-urlencoded">
+    Ваше имя пользователя на intuit:<INPUT NAME=query>
+	<INPUT TYPE=submit VALUE="Посмотреть рейтинг">
+	</FORM>
+	<A HREF="javascript:document.f.submit();">Посмотреть рейтинг</A><Br>
+
+	<FORM NAME=f>
+		<INPUT VALUE="Значение по умолчанию" SIZE=30>
+		<INPUT TYPE=button VALUE="Изменим текст в поле ввода" 
+       		   onClick="document.f.elements[0].value='Изменили текст';">
+	</FORM>
+	<A HREF="javascript:document.f.reset();void(0);">Установили значение по умолчанию</A>
+
+	<form METHOD=post ACTION="script.php" onsubmit="alert('Отправлено!');return false">
+		<p><b>Как по вашему мнению расшифровывается аббревиатура &quot;ЛДПР&quot;?</b></p>
+		<p><input type="radio" name="answer" value="a1">Лаевский Дмитрий - Президент России<Br>
+		<input type="radio" name="answer" value="a3">Лучшее дворовое производство резины<Br>
+		<input type="radio" name="answer" value="a2">Либерально-демократическая партия России</p>
+		<p><input type="submit"></p>
+	</form>
+
+	<FORM onReset="javascript: alert('Не дадим восстановить!');return false;">
+		<INPUT VALUE="Измените этот текст" SIZE=30>
+		<INPUT TYPE=reset VALUE="Восстановить">
+	</FORM><BR>
+
+	<FORM NAME=f>
+		<INPUT NAME=e SIZE=40>
+		<BR><INPUT TYPE=button VALUE="Ввести текст по имени элемента" 
+				   onClick="document.f.e.value='Текст введен по имени элемента';"><BR>
+		<BR><INPUT TYPE=button VALUE="Ввести текст по индексу элемента" 
+				   onClick="document.f.elements[0].value='Текст введен по индексу элемента';">
+		<BR><INPUT TYPE=reset VALUE="Очистить">
+	</FORM>
+
+	<script type="text/javascript">
+	</script>
+</body>
+</html>

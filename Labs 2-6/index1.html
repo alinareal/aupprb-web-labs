@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" /> 
+	<title>Learning JavaScript</title>
+</head>
+<body>
+	<script>
+		// Task_1
+		var a = 2, b = -12, c = 0.5, result;
+		result = a + b + c;
+		document.write(result);
+		result = b * c;
+		document.write("<br />" + result);
+		result = a - b;
+		document.write("<br />" + result);
+		result = a / c;
+		document.write("<br />" + result);
+		result = (a + b)*(c - b) / a;
+		document.write("<br />" + result);
+		result = -a;
+		document.write("<br />" + result);
+		result *= 5; // result = result + 5;
+		document.write("<br />" + result);
+		result = b++;
+		document.write("<br />" + result);
+		result = c--;
+		document.write("<br />" + result);
+
+		var str_1 = "Hello", str_2 = "World!";
+		document.write("<br />" + str_1 + " " + str_2);
+
+		// Task_2
+		function write () {
+			document.write("<br />" + "Relax. Take it easy.");
+		}
+		write();
+
+		// Task_3
+		function count (x, y, z) {
+			sum = x + y + z;
+			document.write("<br />" + sum);
+		}
+		count(3, -6, 9)
+
+		// Task_4
+		document.write("<br />" + "Hello!".length);
+		var myPhone = new Object();
+		myPhone.condition = "Good";
+		myPhone.model = "Xiaomi";
+		myPhone.memory = 30;
+		for (property in myPhone)
+			document.write("<br />" + myPhone[property]);
+		
+
+		// Task_5
+		hello = "HeLlo WoRld!"
+		document.write("<br />" + hello.toUpperCase());
+		document.write("<br />" + hello.toLowerCase());
+		document.write("<br />" + hello.italics());
+		document.write("<br />" + 12.528475.toFixed(2));
+
+		// Task_6
+		var arr = new Array("Alina", 345, 0.45, false, true);
+		document.write("<br />" + arr);
+		document.write("<br />" + arr[2]);
+
+		// Task_12
+		document.write("<br />" + /love/.test('I love you!'));
+		document.write("<br />" + /sun/.test('I love you!'));
+
+		document.write("<br />" + /(hello \S+)/.exec('This is a hello world!'));
+		document.write("<br />" + /Hello/.exec('This is a hello world!'));
+
+		document.write("<br />" + /hello/.compile('This is a hello world!'));
+	</script>
+	<br />
+	<!-- Task_10 -->
+	<input value="Press me" onclick="alert('You are so beautiful!')" type="button">
+	<br />
+
+	<!-- Task_11 -->
+	<a href="pac.by" onmouseover="alert('Welcome!')">Academy of public administration</a>
+    <br />
+
+    <!-- Task_9 -->
+	<script src="script.js"></script>
+</body>
+</html>
